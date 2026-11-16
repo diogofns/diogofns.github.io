@@ -9,6 +9,7 @@
   <title>Diogo Fernandes</title>
   <link rel="canonical" href="https://diogofns.github.io/">
   <style>
+    /* Layout measurements follow https://piesposito.github.io/. */
     html { color-scheme: light; }
     body {
       font-family: Arial, sans-serif;
@@ -47,26 +48,17 @@
       vertical-align: -0.125em;
       fill: currentColor;
     }
-    .project-card,
-    .publication {
+    .project-card {
       border-bottom: 1px solid #ccc;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
-    .project-description,
-    .authors {
+    .project-description {
       font-size: 14px;
       color: #333;
       margin-top: 5px;
     }
-    .publication-list { padding: 0; list-style: none; }
-    .publication h3 { font-size: 16px; font-weight: normal; margin: 0; }
-    .publication-venue,
-    .venue { font-size: 13px; color: #333; }
-    .authors { margin-bottom: 5px; }
-    .paper-links { font-size: 13px; }
-    .paper-links a { margin-right: 10px; }
-    .full-list { font-size: 14px; }
+    .project-venue { font-size: 13px; color: #333; }
     a:focus-visible { outline: 2px solid #007bff; outline-offset: 3px; }
     .skip-link {
       position: absolute;
@@ -82,7 +74,7 @@
     }
     @media print {
       nav, .header-social-icons, .skip-link { display: none; }
-      .publication { break-inside: avoid; }
+      .project-card { break-inside: avoid; }
     }
   </style>
 </head>
@@ -103,8 +95,12 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <!-- Upload cv.pdf and add <li><a href="cv.pdf">CV</a></li> when ready. -->
+        <li><a href="https://scholar.google.com.br/citations?user=EFtT-g8AAAAJ&amp;hl=pt-BR">Google Scholar</a></li>
+        <li>
+        <a href="https://raw.githubusercontent.com/diogofns/diogofns/main/diogofernandes-resume.pdf">
+          CV
+        </a>
+      </li>
       </ul>
     </nav>
   </header>
@@ -120,58 +116,34 @@
       <h2 id="projects-title">Projects</h2>
       <div class="project-card">
         <div><a href="https://huggingface.co/ceia-research/lumi-4b">Lumi-4B</a></div>
+        <div class="project-venue">CEIA-UFG · 2026</div>
         <p class="project-description">CEIA-UFG's small language model for Brazilian Portuguese, designed to make text generation more efficient and affordable.</p>
       </div>
-    </section>
-
-    <section id="publications" aria-labelledby="publications-title">
-      <h2 id="publications-title">Selected Publications</h2>
-      <ol class="publication-list">
-        <li class="publication">
-          <article aria-labelledby="memory-title">
-            <h3 id="memory-title"><a href="https://aclanthology.org/2026.aacl-long.19/">Episodic Memory from Compression Boundaries in Latent Representation Space</a></h3>
-            <p class="authors">David O’Neil Campos Ferreira, Priscila Rocha Maia Freitas Ribeiro, Emanuel Borges Passinato, <strong>Diogo Fernandes Costa Silva</strong>, Arlindo Rodrigues Galvão Filho</p>
-            <div class="publication-meta">
-              <span class="venue">AACL-IJCNLP 2026 · Long paper</span>
-              <div class="paper-links" aria-label="Episodic Memory resources">
-                <a href="https://aclanthology.org/2026.aacl-long.19/">Paper</a>
-                <a href="https://aclanthology.org/2026.aacl-long.19.pdf" aria-label="Episodic Memory paper, PDF">PDF</a>
-              </div>
-            </div>
-          </article>
-        </li>
-
-        <li class="publication">
-          <article aria-labelledby="speech-title">
-            <h3 id="speech-title"><a href="https://aclanthology.org/2026.emnlp-main.2581/">ParaSpeechRAG: A Benchmark for Robust Speech Retrieval under Paralinguistic and Acoustic Perturbations</a></h3>
-            <p class="authors">Alexandre Costa Ferro Filho, Marcos Paulo C M Queiroz, Matheus Franco Medeiros, Gabriel Orlow De Oliveira Sene, Murilo Alvares Silva, <strong>Diogo Fernandes Costa Silva</strong>, Arlindo Rodrigues Galvão Filho</p>
-            <div class="publication-meta">
-              <span class="venue">EMNLP 2026</span>
-              <div class="paper-links" aria-label="ParaSpeechRAG resources">
-                <a href="https://aclanthology.org/2026.emnlp-main.2581/">Paper</a>
-                <a href="https://aclanthology.org/2026.emnlp-main.2581.pdf" aria-label="ParaSpeechRAG paper, PDF">PDF</a>
-                <a href="https://github.com/AKCIT-Speech/ParaSpeechRAG-Benchmark">Code</a>
-              </div>
-            </div>
-          </article>
-        </li>
-
-        <li class="publication">
-          <article aria-labelledby="ifeval-title">
-            <h3 id="ifeval-title"><a href="https://aclanthology.org/2026.emnlp-main.742/">Portuguese-IFEval: Instruction-Following Evaluation in Portuguese</a></h3>
-            <p class="authors">Emanuel Borges Passinato, Gustavo Pires Fontana, Cibelle Pires Botelho, Júlia Jaime Biancolini, <strong>Diogo Fernandes Costa Silva</strong>, Arlindo Rodrigues Galvão Filho</p>
-            <div class="publication-meta">
-              <span class="venue">EMNLP 2026</span>
-              <div class="paper-links" aria-label="Portuguese-IFEval resources">
-                <a href="https://aclanthology.org/2026.emnlp-main.742/">Paper</a>
-                <a href="https://aclanthology.org/2026.emnlp-main.742.pdf" aria-label="Portuguese-IFEval paper, PDF">PDF</a>
-                <a href="https://github.com/gap-ufg/Portuguese-IFEval">Code</a>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ol>
-      <p class="full-list"><a href="https://scholar.google.com.br/citations?user=EFtT-g8AAAAJ&amp;hl=pt-BR">Full publication list on Google Scholar</a></p>
+      <div class="project-card">
+        <div>ECHO</div>
+        <div class="project-venue">EACL 2027</div>
+        <p class="project-description">An activation steering framework for controlling LLM personas, complementing system prompts and improving conversational expression.</p>
+      </div>
+      <div class="project-card">
+        <div><a href="https://aclanthology.org/2026.aacl-long.19/">ReSuME</a></div>
+        <div class="project-venue">AACL-IJCNLP 2026</div>
+        <p class="project-description">An agent memory method that uses sparse autoencoders to select which dialogue turns to retain, improving retrieval on MemoryAgentBench.</p>
+      </div>
+      <div class="project-card">
+        <div><a href="https://aclanthology.org/2026.emnlp-main.2581/">ParaSpeechRAG</a></div>
+        <div class="project-venue">EMNLP 2026</div>
+        <p class="project-description">A benchmark for speech retrieval under changes in speaker, prosody, and acoustic conditions, revealing how these variations affect retrieval performance.</p>
+      </div>
+      <div class="project-card">
+        <div><a href="https://openreview.net/pdf?id=8ovluzEutL">SC-LoRA</a></div>
+        <div class="project-venue">CoLoRAI @ ICML 2026</div>
+        <p class="project-description">A LoRA method that uses sparse autoencoder features to select specialist adapters and allocate rank per token, reducing forgetting across tasks.</p>
+      </div>
+      <div class="project-card">
+        <div><a href="https://openreview.net/pdf?id=3oV1EhPSn2">The Selective Safety Trap</a></div>
+        <div class="project-venue">ICBINB @ ICLR 2026 · Didactic Paper Award</div>
+        <p class="project-description">A bilingual evaluation of LLM safety across minority groups, exposing differences in defense rates under matched adversarial attacks.</p>
+      </div>
     </section>
   </main>
 
